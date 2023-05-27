@@ -43,6 +43,19 @@ app.post("/insertdata", async (req, res) => {
     }
 });
 
+// for get data
+
+app.get("/getdata", async (req, res) => {
+
+
+    try {
+        const formdata = await formModel.find();
+        res.status(200).send(formdata);
+    } catch (err) {
+        res.status(500).send({ msg: "something wrong while form input", err: err });
+    }
+});
+
 
 
 
