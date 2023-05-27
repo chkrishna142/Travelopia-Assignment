@@ -76,3 +76,9 @@ margin-left: 50px;
   border-bottom: 2px solid rgb(124, 163, 215);
 }
 
+.downbtn{
+  width:700px;
+  margin: auto;
+ justify-content: end;
+  
+}

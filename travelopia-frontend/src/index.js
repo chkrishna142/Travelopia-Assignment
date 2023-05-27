@@ -7,22 +7,23 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { ColorModeScript } from '@chakra-ui/color-mode';
 import { BrowserRouter } from "react-router-dom"
 import theme from './theme';
-
-
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={store} >
+    <BrowserRouter>
 
-  <BrowserRouter>
+      <ChakraProvider theme={theme}>
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+        <App />
+      </ChakraProvider>
 
-    <ChakraProvider theme={theme}>
-      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <App />
-    </ChakraProvider>
-
-  </BrowserRouter>
+    </BrowserRouter>
+  </Provider>
 
 );
 

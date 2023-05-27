@@ -22,12 +22,17 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 
+import { useDispatch, useSelector } from "react-redux";
+import { sendData } from "../redux/action";
+import { useNavigate } from "react-router-dom";
+
 function Formtoinput() {
   const [value, setValue] = React.useState(0);
   const handleChange = (value) => {
     setValue(value);
     setTravellers(value);
   };
+
   const { colorMode, toggleColorMode } = useColorMode();
   const [name, setName] = useState("");
   const [emailid, setEmail] = useState("");
@@ -35,14 +40,17 @@ function Formtoinput() {
   const [travellers, setTravellers] = useState(2);
   const [budget, setBudget] = useState(2000);
   const total = budget * travellers;
+
+  let { loading, loaded } = useSelector((state) => state.Insert);
+
+  let dispatch = useDispatch();
+  let navigate = useNavigate();
+
   const changetravellers = (v) => {
     if (travellers !== 1) setTravellers(travellers + v);
   };
 
-  // console.log(
-  //   name + " " + emailid + " " + place + " " + travellers + " " + budget
-  // );
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const formInputs = {
       name: name,
@@ -52,7 +60,14 @@ function Formtoinput() {
       budget: budget,
       total: total,
     };
-    console.log(formInputs);
+
+    dispatch(sendData(formInputs)).then((res) => {
+      if (loading) {
+        navigate("/loader");
+      } else {
+        navigate("/loaded");
+      }
+    });
   };
   return (
     <div
