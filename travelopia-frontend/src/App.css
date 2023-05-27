@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  /* background:linear-gradient(to bottom, #b6f0ff 0%, #ecf2c8 100%); */
+  height: 100vh;
+  /* background-image:url(./images/wp4782956.jpg) ; */
+  background-repeat: no-repeat;
+  background-size: 100% 100% ;
 }
 
 .App-logo {
@@ -36,3 +42,37 @@
     transform: rotate(360deg);
   }
 }
+
+.headOfPage{
+  display: flex;
+  
+  
+  color: #000000 (black);
+  justify-content: center;
+  margin: auto;
+  height: 80px;
+  font-size: 25px;
+  align-items: center;
+  
+ 
+}
+
+.headOfPage div{
+margin-left: 50px;
+}
+
+.formtable{
+  width: 500px;
+  padding: 20px;
+  margin: auto;
+  border:2px solid rgba(0, 0, 0, 0.408);
+  background-color:transparent;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+.nameinput{
+  outline: none;
+  border-bottom: 2px solid rgb(124, 163, 215);
+}
+
