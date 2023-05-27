@@ -42,7 +42,7 @@ Inside `.env` create this:
 
 `REACT_APP_SERVER_URL= http://localhost:5001`
 
-Now your connected frontend with backend
+Now your frontend is connected with backend
 
 6.Start the front-end development server.
 
