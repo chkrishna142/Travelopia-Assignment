@@ -38,15 +38,13 @@ function TableWithPagination({ data, itemsPerPage }) {
         <DownloadExcel data={pageItems} />
       </div>
       <div
+        className="tablebody"
         style={{
-          margin: "auto",
-          marginTop: "10px",
-          width: "700px",
           background: colorMode === "light" ? "white" : "black",
           justifyContent: "center",
         }}
       >
-        <TableContainer w={"700px"}>
+        <TableContainer w={["350px", "700px"]}>
           <Table variant="striped" colorScheme="teal">
             {/* <TableCaption>Imperial to metric conversion factors</TableCaption> */}
             <Thead>

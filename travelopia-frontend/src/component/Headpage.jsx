@@ -5,7 +5,7 @@ function Headpage() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <div className="headOfPage">
-      <h1 style={{ fontSize: "35px" }}>Welcome to Travelopia</h1>
+      <h1 className="welcome">Welcome to Travelopia</h1>
       <div>
         <Button onClick={toggleColorMode}>
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}

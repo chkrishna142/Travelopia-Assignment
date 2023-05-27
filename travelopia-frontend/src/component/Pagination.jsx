@@ -14,7 +14,12 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
   };
 
   return (
-    <ButtonGroup gap="4" justifyContent={"space-evenly"} w={"500px"} mt={"5px"}>
+    <ButtonGroup
+      gap="4"
+      justifyContent={"space-evenly"}
+      w={["300px", "500px"]}
+      mt={"5px"}
+    >
       <Button onClick={handlePreviousPage} disabled={currentPage === 1}>
         Previous
       </Button>

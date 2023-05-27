@@ -17,6 +17,7 @@ import { storeFormData } from "../redux/action";
 import axios from "axios";
 import Formtable from "./Formtable";
 import TableWithPagination from "./Tablewithpagination";
+import Loader from "./Loader";
 
 function Dashboard() {
   let dispatch = useDispatch();
@@ -30,11 +31,19 @@ function Dashboard() {
     dispatch(storeFormData());
   }, []);
 
-  return (
-    <div>
-      <TableWithPagination data={formsData} itemsPerPage={itemsPerPage} />
-    </div>
-  );
+  if (loading) {
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <TableWithPagination data={formsData} itemsPerPage={itemsPerPage} />
+      </div>
+    );
+  }
 }
 
 export default Dashboard;

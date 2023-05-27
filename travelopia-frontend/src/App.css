@@ -82,3 +82,56 @@ margin-left: 50px;
  justify-content: end;
   
 }
+.welcome{
+   font-size: 35px;
+}
+.tablebody{
+  margin: auto;
+  margin-top: 10px;
+  width: 700px;
+}
+
+
+@media (max-width: 540px) {
+  .formtable{
+    width: 300px;
+    padding: 20px;
+    margin: auto;
+    border:2px solid rgba(0, 0, 0, 0.408);
+    background-color:transparent;
+    margin-top: 25px;
+    border-radius: 10px;
+  }
+
+
+  .headOfPage{
+    display: flex;
+    
+    
+    color: #000000 (black);
+    justify-content: center;
+    margin: auto;
+    height: 80px;
+    font-size: 15px;
+    align-items: center;
+    
+   
+  }
+  .welcome{
+    font-size: 20px;
+ }
+ .downbtn{
+  width:600px;
+  margin: auto;
+ justify-content: end;
+  
+}
+.tablebody{
+  margin: auto;
+  margin-top: 10px;
+  width: 350px;
+}
+ 
+} 
+  
+
