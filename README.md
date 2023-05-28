@@ -12,7 +12,10 @@ Open your command-line interface (such as Terminal or Command Prompt.
 Navigate to the root directory of your React app.
 Run the following command to initialize a new package.json file if you haven't already done so:
 
-`npm init -y`
+```bash
+   npm init -y
+```
+
 
 2.Start a MongoDB database server and acquire the connection string.
 
@@ -24,13 +27,20 @@ You can use MongoDB Atlas or start a local instance via a local installation of 
 
 (enter your connection string below)
 
-`MONGO_URL`=mongodb+srv://name:password@cluster0.bozwxph.mongodb.net/travelForm
 
+
+```bash
+ `MONGO_URL`=mongodb+srv://name:password@cluster0.bozwxph.mongodb.net/travelForm
+```
 4.start the back-end development server.
 
 # Inside /travelopia-backend-
 
-`npm run dev`
+
+```bash
+   npm run dev
+```
+
 
 The back-end server is available at http://localhost:5001
 
@@ -40,12 +50,51 @@ The back-end server is available at http://localhost:5001
 
 Inside `.env` create this:
 
-`REACT_APP_SERVER_URL= http://localhost:5001`
+```bash
+  REACT_APP_SERVER_URL= http://localhost:5001
+```
+
+
+
 
 Now your frontend is connected with backend
 
 6.Start the front-end development server.
 
-# Inside /front-end
+# Inside /travelopia-frontend
 
-`npm run start`
+```bash
+  npm run start
+```
+
+
+
+7.To run test cases
+# Inside /travelopia-frontend
+
+```bash
+  npm run test
+```
+
+
+Your project will get open in browser on : http://localhost:3000/
+
+And Cypress will open 
+
+# Inside cypress tab
+
+`SELECT E2E testing`
+
+Then select your browser and click on start testing 
+
+`cypress\e2e` will appear inside it click on
+
+`travel.specs`
+
+# Your test cases will run
+
+
+
+
+# Thank you
+
