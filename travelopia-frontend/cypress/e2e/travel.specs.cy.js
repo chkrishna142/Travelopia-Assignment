@@ -43,6 +43,7 @@ describe("dataExist", () => {
     const [name, emailid, destination, travellers, budget] = ['krish', 'k@gmail.com', 'Africa', 4, 4000];
 
     beforeEach(() => {
+        cy.wait(5000)
         cy.visit("http://localhost:3000/dashboard")
     })
 
