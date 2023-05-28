@@ -24,7 +24,7 @@ You can use MongoDB Atlas or start a local instance via a local installation of 
 
 (enter your connection string below)
 
-`MONGO_URL`=mongodb+srv://<name>:<password>@cluster0.bozwxph.mongodb.net/travelForm
+`MONGO_URL`=mongodb+srv://name:password@cluster0.bozwxph.mongodb.net/travelForm
 
 4.start the back-end development server.
 
