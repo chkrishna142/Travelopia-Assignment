@@ -24,10 +24,15 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         Previous
       </Button>
       <Button colorScheme="gray">
-        {currentPage} &nbsp; of &nbsp; {totalPages}
+        <span className="currPageNum">{currentPage}</span> &nbsp; of &nbsp;{" "}
+        <span className="lastPageNum">{totalPages}</span>
       </Button>
 
-      <Button onClick={handleNextPage} disabled={currentPage === totalPages}>
+      <Button
+        className="nextBtn"
+        onClick={handleNextPage}
+        disabled={currentPage === totalPages}
+      >
         Next
       </Button>
     </ButtonGroup>

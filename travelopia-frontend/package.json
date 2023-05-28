@@ -11,6 +11,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "cypress": "^12.13.0",
     "file-saver": "^2.0.5",
     "framer-motion": "^10.12.16",
     "netlify-cli": "^15.2.0",
@@ -22,6 +23,7 @@
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
     "router-dom": "^2.2.11",
+    "start-server-and-test": "^2.0.0",
     "thunk": "^0.0.1",
     "web-vitals": "^2.1.4",
     "xlsx": "^0.18.5"
@@ -29,7 +31,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "cypress": "cypress open",
+    "test": "start-server-and-test start 3000 cypress",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

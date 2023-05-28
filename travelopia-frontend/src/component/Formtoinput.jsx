@@ -110,9 +110,9 @@ function Formtoinput() {
               name="place"
               onChange={(e) => setPlace(e.target.value)}
             >
-              <option>India</option>
-              <option>Africa</option>
-              <option>Europe</option>
+              <option value={"India"}>India</option>
+              <option value={"Africa"}>Africa</option>
+              <option value={"Europe"}>Europe</option>
             </Select>
           </FormControl>
           <FormControl isRequired>
@@ -122,7 +122,7 @@ function Formtoinput() {
               <NumberInputField
                 variant="filled"
                 value={travellers}
-                // name="travellers"
+                name="travellers"
                 onChange={(e) => setTravellers(e.target.value)}
               />
               <NumberInputStepper>
@@ -153,7 +153,7 @@ function Formtoinput() {
             }}
           >
             <Text fontSize="md">Net Budget: $ {total}</Text>
-            <Button type="submit" colorScheme="cyan">
+            <Button type="submit" colorScheme="cyan" className="submitButton">
               SUBMIT
             </Button>
           </Box>

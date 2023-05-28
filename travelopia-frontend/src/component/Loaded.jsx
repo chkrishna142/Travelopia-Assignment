@@ -6,7 +6,7 @@ function Loaded() {
   const { colorMode, toggleColorMode } = useColorMode();
   const order = useSelector((state) => state.Insert.order);
   return (
-    <div>
+    <div className="loadedComponent">
       <Box
         style={{
           backgroundColor: colorMode === "light" ? "#F5D14E" : "black",
@@ -17,7 +17,7 @@ function Loaded() {
           height: "95px",
         }}
       >
-        <Heading>Your Form submitted </Heading>
+        <Heading>Your Form submitted</Heading>
         <Text fontSize="lg">
           Your submission has been made with ID - {order}{" "}
         </Text>
